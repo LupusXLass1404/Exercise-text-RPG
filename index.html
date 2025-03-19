@@ -13,7 +13,16 @@
     <div id="start">
         <h2 id="title">RPG冒險：勇者的使命</h2>
         <button id="startBnt" class="link">開始遊戲</button>
-        <div id="test"></div>
+        <br><br>
+        <p>
+            這是我用 JavaScript 開發的練習作品，目前遊戲尚未有結局及Boss。
+        </p>
+        <p>
+            已知問題：若連續按數字鍵，可能會出現黑屏，請再按一次數字鍵以恢復。
+        </p>
+        <p>
+            感謝您的遊玩！
+        </p>
     </div>
 
     <div id="main" style="display: none;">
@@ -590,9 +599,9 @@
 
                     // 減少玩家血量
                     Player.hp -= monster.attack;
-                    
-                    let arrText = ['你舉劍衝向怪物，','你揮動長劍，直取怪物要害。','你猛然揮劍，'];
-                    
+
+                    let arrText = ['你舉劍衝向怪物，', '你揮動長劍，直取怪物要害。', '你猛然揮劍，'];
+
                     // 攻擊文本
                     document.getElementById('fight_action').innerHTML = `<p>${arrText[rng0(3)]}<span class="green">對 ${monster.name} 造成了 ${attr} 點傷害。</p><p></span>${monster.name} 撞擊了你，<span class="red">你損失了 ${`${monster.attack}`} 點生命值。</span></p>`;
 
@@ -979,7 +988,7 @@
         }
         // 隨機數（0 ~ numMax）
         function rng0(numMax) {
-            return Math.floor(Math.random() * numMax) ;
+            return Math.floor(Math.random() * numMax);
         }
 
         // 圖片讀取
